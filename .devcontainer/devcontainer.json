@@ -1,0 +1,36 @@
+{
+    "name": "RecReview_from_vscode",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "RecReview",
+    "remoteUser": "ubuntu",
+    "workspaceFolder": "/home/ubuntu/project",
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "GitHub.github-vscode-theme",
+        "vscodevim.vim",
+        "github.copilot"
+    ],
+    "settings": {
+        "workbench.colorTheme": "GitHub Dark Dimmed",
+        "files.autoSave": "afterDelay",
+        "workbench.editor.untitled.hint": "hidden",
+        "editor.inlineSuggest.enabled": true,
+        "[python]": {
+            "editor.formatOnType": true
+        },
+        "github.copilot.enable": {
+            "*": true,
+            "plaintext": false,
+            "markdown": false,
+            "scminput": false,
+            "yaml": false
+        },
+        "terminal.integrated.enableMultiLinePasteWarning": false,
+        "editor.fontFamily": "\"Ubuntu Mono\"",
+        "terminal.integrated.fontFamily": "monospace",
+        "editor.fontSize": 17
+    } 
+}
+
+
