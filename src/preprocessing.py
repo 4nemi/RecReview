@@ -39,6 +39,7 @@ def main(argv):
     r = re.compile(r"5つ星のうち(\d\.\d)")
     df['rating'] = df['rating'].apply(lambda x: float(r.search(x).group(1)))
     df['review'] = df['review'].apply(clean_text)
+    df['name'] = df['name'].apply(lambda x: re.sub(r"\ufeff", "", x))
     jp_idx = df['review'].apply(has_japnese)
     df = df[jp_idx]
     post_len = len(df)
