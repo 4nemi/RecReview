@@ -19,9 +19,15 @@ class BERTDataset:
             add_special_tokens=True, 
             truncation=True,
             max_length=self.max_len,
-            pad_to_max_length=True,
+            padding="max_length",
         )
         for k, v in inputs.items():
             inputs[k] = torch.tensor(v, dtype=torch.long)
         target = torch.tensor(self.target[item], dtype=torch.float)
-        return inputs, target
+
+        return {
+            "ids": inputs["input_ids"],
+            "mask": inputs["attention_mask"],
+            "token_type_ids": inputs["token_type_ids"],
+            "targets": target
+        }

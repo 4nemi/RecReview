@@ -11,11 +11,12 @@ if DEBUG:
 
 MODEL = "cl-tohoku/bert-base-japanese-whole-word-masking"
 
-MODEL_PATH = "../models/f'model_{MODEL_NUM}.bin'"
+MODEL_PATH = "../models/model_{}.bin".format(MODEL_NUM)
 
 MAX_LEN = 512
 
-BATCH_SIZE = 16
+TRAIN_BATCH_SIZE = 16
+VALID_BATCH_SIZE = 16
 
 ENCODER_LR = 2e-5
 DECODER_LR = 2e-5
