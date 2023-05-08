@@ -2,3 +2,4 @@ input
 output
 models
 __pycache__
+wandb
